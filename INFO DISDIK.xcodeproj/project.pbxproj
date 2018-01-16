@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		104BF9481044907F0A77E704 /* Pods_INFO_DISDIK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F863EE8A6C0DAA2ACE88FB1E /* Pods_INFO_DISDIK.framework */; };
+		F400CF161FE03B9500498D2F /* ArtikelBaru.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400CF151FE03B9500498D2F /* ArtikelBaru.swift */; };
+		F40209F92002778B00640BA7 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40209F82002778B00640BA7 /* DummyData.swift */; };
+		F40209FD20027F7E00640BA7 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40209FC20027F7E00640BA7 /* ImageCache.swift */; };
+		F403EB162009A7FA00020012 /* ViewLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403EB152009A7FA00020012 /* ViewLikeList.swift */; };
+		F403EB182009AD8B00020012 /* ViewBeritaLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403EB172009AD8B00020012 /* ViewBeritaLite.swift */; };
+		F403EB1A2009AE4700020012 /* ViewBerita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403EB192009AE4700020012 /* ViewBerita.swift */; };
+		F4080CFA1FD534D600C5EA78 /* Daftar1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4080CF91FD534D600C5EA78 /* Daftar1Controller.swift */; };
+		F4080CFC1FD5352300C5EA78 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4080CFB1FD5352300C5EA78 /* ProfileController.swift */; };
+		F4080CFE1FD53AF700C5EA78 /* ListKelompokController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4080CFD1FD53AF700C5EA78 /* ListKelompokController.swift */; };
+		F40ACC6F200DF8AF002BAD41 /* SharePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40ACC6E200DF8AF002BAD41 /* SharePopUp.swift */; };
+		F410173B1FE24D2E006BBA3E /* Berita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410173A1FE24D2E006BBA3E /* Berita.swift */; };
+		F410173D1FE250D2006BBA3E /* BeritaLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410173C1FE250D2006BBA3E /* BeritaLite.swift */; };
+		F41017411FE26CD1006BBA3E /* ArtikelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41017401FE26CD1006BBA3E /* ArtikelCell.swift */; };
+		F414F1051FD7B94800E27FED /* BuatKelompokController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414F1041FD7B94800E27FED /* BuatKelompokController.swift */; };
+		F41568A71FF889E000C87EB9 /* Simpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41568A61FF889E000C87EB9 /* Simpan.swift */; };
+		F41709BD1FFE3AF700A143E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41709BC1FFE3AF700A143E1 /* GoogleService-Info.plist */; };
+		F4181EEC1FEE4B8300C20D73 /* IsiBerita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4181EEB1FEE4B8300C20D73 /* IsiBerita.swift */; };
+		F41AC6C61FE385C300E8698C /* SelectedContactCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6C51FE385C300E8698C /* SelectedContactCollectCell.swift */; };
+		F41AC6C81FE3A92000E8698C /* Kontak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6C71FE3A92000E8698C /* Kontak.swift */; };
+		F41AC6CA1FE3AA6800E8698C /* AnggotaLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6C91FE3AA6800E8698C /* AnggotaLite.swift */; };
+		F41AC6CC1FE3C89400E8698C /* Transformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6CB1FE3C89400E8698C /* Transformator.swift */; };
+		F41AC6CE1FE3D2C200E8698C /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6CD1FE3D2C200E8698C /* Authorization.swift */; };
+		F42125E91FE2F38900CB3FE1 /* AddContactNewKelompok.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42125E81FE2F38900CB3FE1 /* AddContactNewKelompok.swift */; };
+		F426E5B1200079BB004B0BB0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426E5B0200079BB004B0BB0 /* Strings.swift */; };
+		F42D6E45200CB83900FF5243 /* SurveiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D6E44200CB83900FF5243 /* SurveiController.swift */; };
+		F4307F681FE985CF00DA640F /* GPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F671FE985CF00DA640F /* GPS.swift */; };
+		F43EEBF41FE99C0A0015905B /* SettingLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43EEBF31FE99C0A0015905B /* SettingLite.swift */; };
+		F44002A61FE0EE8800042FD2 /* Kelompok.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44002A51FE0EE8800042FD2 /* Kelompok.swift */; };
+		F44002A91FE0EFE300042FD2 /* KelompokLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44002A81FE0EFE300042FD2 /* KelompokLite.swift */; };
+		F44379C0200721C800EF445F /* Lokasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44379BF200721C800EF445F /* Lokasi.swift */; };
+		F4454D721FEDF8660056A2C0 /* STool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4454D711FEDF8660056A2C0 /* STool.swift */; };
+		F449A6B01FFC0AE00086FBCD /* IsiBeritaLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449A6AF1FFC0AE00086FBCD /* IsiBeritaLite.swift */; };
+		F44B2F631FE4CB9F004463A7 /* HandleKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B2F621FE4CB9F004463A7 /* HandleKeyboard.swift */; };
+		F44C78EA1FEC9E5800E29A64 /* SimpanNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C78E91FEC9E5800E29A64 /* SimpanNet.swift */; };
+		F4537B6920047F9A00B6BDF9 /* PathGrupLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4537B6820047F9A00B6BDF9 /* PathGrupLite.swift */; };
+		F4574B6F200D9B680008EE80 /* EditIsiBerita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4574B6E200D9B680008EE80 /* EditIsiBerita.swift */; };
+		F458AA3C1FDFE06400A0FD3A /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458AA3B1FDFE06400A0FD3A /* DeviceModel.swift */; };
+		F463FEF21FE9012E0029A1DC /* PilihAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F463FEF11FE9012E0029A1DC /* PilihAdmin.swift */; };
+		F4658C2A1FDBA476004B648B /* ListArtikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4658C291FDBA476004B648B /* ListArtikel.swift */; };
+		F46BE9771FF8C69B0007CB22 /* Anggota.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BE9761FF8C69B0007CB22 /* Anggota.swift */; };
+		F46EBE4F200384A70028F70D /* AmbilNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46EBE4E200384A70028F70D /* AmbilNet.swift */; };
+		F470FEC01FE3798400E9EFC4 /* ListContactTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470FEBF1FE3798400E9EFC4 /* ListContactTCell.swift */; };
+		F4965E6A1FD2593E0085F213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4965E691FD2593E0085F213 /* AppDelegate.swift */; };
+		F4965E6F1FD2593E0085F213 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4965E6D1FD2593E0085F213 /* Main.storyboard */; };
+		F4965E711FD2593E0085F213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4965E701FD2593E0085F213 /* Assets.xcassets */; };
+		F4965E741FD2593E0085F213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4965E721FD2593E0085F213 /* LaunchScreen.storyboard */; };
+		F4980EB71FEB4AD4000CF628 /* IsiBeritaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4980EB61FEB4AD4000CF628 /* IsiBeritaCell.swift */; };
+		F4DEBD3E1FDA906500FBC581 /* DetailArtikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DEBD3D1FDA906500FBC581 /* DetailArtikel.swift */; };
+		F4F0342A1FD9013800691FF5 /* KelompokCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F034291FD9013800691FF5 /* KelompokCell.swift */; };
+		F4F0342C1FD9404500691FF5 /* contactCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F0342B1FD9404500691FF5 /* contactCollectCell.swift */; };
+		F4F254251FE75DAD00AB4574 /* AnggotaKelompok.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F254241FE75DAD00AB4574 /* AnggotaKelompok.swift */; };
+		F4F254271FE75E0700AB4574 /* AnggotaKelompokCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F254261FE75E0700AB4574 /* AnggotaKelompokCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27CD5C843E58CB93B2902838 /* Pods-INFO DISDIK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INFO DISDIK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK.debug.xcconfig"; sourceTree = "<group>"; };
+		6F8FED3BEF591678F89C9E82 /* Pods-INFO DISDIK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INFO DISDIK.release.xcconfig"; path = "Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK.release.xcconfig"; sourceTree = "<group>"; };
+		B859F7D167FC3EE37B77747B /* Pods-Project 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project 1/Pods-Project 1.debug.xcconfig"; sourceTree = "<group>"; };
+		DE48D3E5DB74949D5BB51A1B /* Pods-Project 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project 1/Pods-Project 1.release.xcconfig"; sourceTree = "<group>"; };
+		F400CF151FE03B9500498D2F /* ArtikelBaru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelBaru.swift; sourceTree = "<group>"; };
+		F40209F82002778B00640BA7 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		F40209FC20027F7E00640BA7 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F403EB152009A7FA00020012 /* ViewLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLikeList.swift; sourceTree = "<group>"; };
+		F403EB172009AD8B00020012 /* ViewBeritaLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBeritaLite.swift; sourceTree = "<group>"; };
+		F403EB192009AE4700020012 /* ViewBerita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBerita.swift; sourceTree = "<group>"; };
+		F4080CF91FD534D600C5EA78 /* Daftar1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daftar1Controller.swift; sourceTree = "<group>"; };
+		F4080CFB1FD5352300C5EA78 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		F4080CFD1FD53AF700C5EA78 /* ListKelompokController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKelompokController.swift; sourceTree = "<group>"; };
+		F40ACC6E200DF8AF002BAD41 /* SharePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUp.swift; sourceTree = "<group>"; };
+		F410173A1FE24D2E006BBA3E /* Berita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Berita.swift; sourceTree = "<group>"; };
+		F410173C1FE250D2006BBA3E /* BeritaLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaLite.swift; sourceTree = "<group>"; };
+		F41017401FE26CD1006BBA3E /* ArtikelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelCell.swift; sourceTree = "<group>"; };
+		F414F1041FD7B94800E27FED /* BuatKelompokController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuatKelompokController.swift; sourceTree = "<group>"; };
+		F41568A61FF889E000C87EB9 /* Simpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simpan.swift; sourceTree = "<group>"; };
+		F41709BC1FFE3AF700A143E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4181EEB1FEE4B8300C20D73 /* IsiBerita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsiBerita.swift; sourceTree = "<group>"; };
+		F41AC6C51FE385C300E8698C /* SelectedContactCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedContactCollectCell.swift; sourceTree = "<group>"; };
+		F41AC6C71FE3A92000E8698C /* Kontak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kontak.swift; sourceTree = "<group>"; };
+		F41AC6C91FE3AA6800E8698C /* AnggotaLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnggotaLite.swift; sourceTree = "<group>"; };
+		F41AC6CB1FE3C89400E8698C /* Transformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformator.swift; sourceTree = "<group>"; };
+		F41AC6CD1FE3D2C200E8698C /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		F42125E81FE2F38900CB3FE1 /* AddContactNewKelompok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactNewKelompok.swift; sourceTree = "<group>"; };
+		F426E5B0200079BB004B0BB0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		F42D6E44200CB83900FF5243 /* SurveiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveiController.swift; sourceTree = "<group>"; };
+		F4307F671FE985CF00DA640F /* GPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS.swift; sourceTree = "<group>"; };
+		F43EEBF31FE99C0A0015905B /* SettingLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLite.swift; sourceTree = "<group>"; };
+		F44002A51FE0EE8800042FD2 /* Kelompok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kelompok.swift; sourceTree = "<group>"; };
+		F44002A81FE0EFE300042FD2 /* KelompokLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelompokLite.swift; sourceTree = "<group>"; };
+		F44379BF200721C800EF445F /* Lokasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lokasi.swift; sourceTree = "<group>"; };
+		F4454D711FEDF8660056A2C0 /* STool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STool.swift; sourceTree = "<group>"; };
+		F449A6AF1FFC0AE00086FBCD /* IsiBeritaLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsiBeritaLite.swift; sourceTree = "<group>"; };
+		F44B2F621FE4CB9F004463A7 /* HandleKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleKeyboard.swift; sourceTree = "<group>"; };
+		F44C78E91FEC9E5800E29A64 /* SimpanNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpanNet.swift; sourceTree = "<group>"; };
+		F4537B6820047F9A00B6BDF9 /* PathGrupLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGrupLite.swift; sourceTree = "<group>"; };
+		F4574B6E200D9B680008EE80 /* EditIsiBerita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIsiBerita.swift; sourceTree = "<group>"; };
+		F458AA3B1FDFE06400A0FD3A /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		F463FEF11FE9012E0029A1DC /* PilihAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihAdmin.swift; sourceTree = "<group>"; };
+		F4658C291FDBA476004B648B /* ListArtikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArtikel.swift; sourceTree = "<group>"; };
+		F46BE9761FF8C69B0007CB22 /* Anggota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anggota.swift; sourceTree = "<group>"; };
+		F46EBE4E200384A70028F70D /* AmbilNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilNet.swift; sourceTree = "<group>"; };
+		F470FEBF1FE3798400E9EFC4 /* ListContactTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactTCell.swift; sourceTree = "<group>"; };
+		F4965E661FD2593E0085F213 /* INFO DISDIK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "INFO DISDIK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4965E691FD2593E0085F213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4965E6E1FD2593E0085F213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4965E701FD2593E0085F213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4965E731FD2593E0085F213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4965E751FD2593E0085F213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4980EB61FEB4AD4000CF628 /* IsiBeritaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsiBeritaCell.swift; sourceTree = "<group>"; };
+		F4B328822004D8B600301DBC /* INFO DISDIK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "INFO DISDIK.entitlements"; sourceTree = "<group>"; };
+		F4DEBD3D1FDA906500FBC581 /* DetailArtikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtikel.swift; sourceTree = "<group>"; };
+		F4F034291FD9013800691FF5 /* KelompokCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelompokCell.swift; sourceTree = "<group>"; };
+		F4F0342B1FD9404500691FF5 /* contactCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactCollectCell.swift; sourceTree = "<group>"; };
+		F4F254241FE75DAD00AB4574 /* AnggotaKelompok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnggotaKelompok.swift; sourceTree = "<group>"; };
+		F4F254261FE75E0700AB4574 /* AnggotaKelompokCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnggotaKelompokCell.swift; sourceTree = "<group>"; };
+		F863EE8A6C0DAA2ACE88FB1E /* Pods_INFO_DISDIK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INFO_DISDIK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFFB1443A6641CFA1EBF3396 /* Pods_Project_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4965E631FD2593E0085F213 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				104BF9481044907F0A77E704 /* Pods_INFO_DISDIK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F76C5331439B301DA370F1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B859F7D167FC3EE37B77747B /* Pods-Project 1.debug.xcconfig */,
+				DE48D3E5DB74949D5BB51A1B /* Pods-Project 1.release.xcconfig */,
+				27CD5C843E58CB93B2902838 /* Pods-INFO DISDIK.debug.xcconfig */,
+				6F8FED3BEF591678F89C9E82 /* Pods-INFO DISDIK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1C0E2A860109042F1ED5B3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFFB1443A6641CFA1EBF3396 /* Pods_Project_1.framework */,
+				F863EE8A6C0DAA2ACE88FB1E /* Pods_INFO_DISDIK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F40209FA20027F3C00640BA7 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F40209F82002778B00640BA7 /* DummyData.swift */,
+				F41568A61FF889E000C87EB9 /* Simpan.swift */,
+				F46EBE4E200384A70028F70D /* AmbilNet.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		F40209FB20027F5E00640BA7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F458AA3B1FDFE06400A0FD3A /* DeviceModel.swift */,
+				F40209FC20027F7E00640BA7 /* ImageCache.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4080CF81FD5340A00C5EA78 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4965E691FD2593E0085F213 /* AppDelegate.swift */,
+				F4080CF91FD534D600C5EA78 /* Daftar1Controller.swift */,
+				F4080CFB1FD5352300C5EA78 /* ProfileController.swift */,
+				F4080CFD1FD53AF700C5EA78 /* ListKelompokController.swift */,
+				F4F254241FE75DAD00AB4574 /* AnggotaKelompok.swift */,
+				F42125E81FE2F38900CB3FE1 /* AddContactNewKelompok.swift */,
+				F414F1041FD7B94800E27FED /* BuatKelompokController.swift */,
+				F463FEF11FE9012E0029A1DC /* PilihAdmin.swift */,
+				F4658C291FDBA476004B648B /* ListArtikel.swift */,
+				F4DEBD3D1FDA906500FBC581 /* DetailArtikel.swift */,
+				F400CF151FE03B9500498D2F /* ArtikelBaru.swift */,
+				F403EB152009A7FA00020012 /* ViewLikeList.swift */,
+				F4574B6E200D9B680008EE80 /* EditIsiBerita.swift */,
+				F40ACC6E200DF8AF002BAD41 /* SharePopUp.swift */,
+				F42D6E44200CB83900FF5243 /* SurveiController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F414F12A1FD7D64B00E27FED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4307F641FE9788000DA640F /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F44C78E91FEC9E5800E29A64 /* SimpanNet.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F44002A41FE0EE7D00042FD2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F44002A51FE0EE8800042FD2 /* Kelompok.swift */,
+				F410173A1FE24D2E006BBA3E /* Berita.swift */,
+				F41AC6C71FE3A92000E8698C /* Kontak.swift */,
+				F4181EEB1FEE4B8300C20D73 /* IsiBerita.swift */,
+				F46BE9761FF8C69B0007CB22 /* Anggota.swift */,
+				F44379BF200721C800EF445F /* Lokasi.swift */,
+				F403EB192009AE4700020012 /* ViewBerita.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F44002A71FE0EFBE00042FD2 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				F44002A81FE0EFE300042FD2 /* KelompokLite.swift */,
+				F410173C1FE250D2006BBA3E /* BeritaLite.swift */,
+				F41AC6C91FE3AA6800E8698C /* AnggotaLite.swift */,
+				F43EEBF31FE99C0A0015905B /* SettingLite.swift */,
+				F449A6AF1FFC0AE00086FBCD /* IsiBeritaLite.swift */,
+				F4537B6820047F9A00B6BDF9 /* PathGrupLite.swift */,
+				F403EB172009AD8B00020012 /* ViewBeritaLite.swift */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		F458AA3A1FDFE04C00A0FD3A /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				F41AC6CB1FE3C89400E8698C /* Transformator.swift */,
+				F41AC6CD1FE3D2C200E8698C /* Authorization.swift */,
+				F44B2F621FE4CB9F004463A7 /* HandleKeyboard.swift */,
+				F4307F671FE985CF00DA640F /* GPS.swift */,
+				F4454D711FEDF8660056A2C0 /* STool.swift */,
+				F426E5B0200079BB004B0BB0 /* Strings.swift */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		F4965E5D1FD2593E0085F213 = {
+			isa = PBXGroup;
+			children = (
+				F4B328822004D8B600301DBC /* INFO DISDIK.entitlements */,
+				F4965E681FD2593E0085F213 /* Project 1 */,
+				F4965E671FD2593E0085F213 /* Products */,
+				5F76C5331439B301DA370F1A /* Pods */,
+				A1C0E2A860109042F1ED5B3A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4965E671FD2593E0085F213 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4965E661FD2593E0085F213 /* INFO DISDIK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4965E681FD2593E0085F213 /* Project 1 */ = {
+			isa = PBXGroup;
+			children = (
+				F40209FB20027F5E00640BA7 /* Extension */,
+				F40209FA20027F3C00640BA7 /* DataManager */,
+				F44002A41FE0EE7D00042FD2 /* Entity */,
+				F4307F641FE9788000DA640F /* Firebase */,
+				F44002A71FE0EFBE00042FD2 /* SQLite */,
+				F458AA3A1FDFE04C00A0FD3A /* Function */,
+				F4F034281FD9010100691FF5 /* CustomCell */,
+				F414F12A1FD7D64B00E27FED /* Model */,
+				F4080CF81FD5340A00C5EA78 /* Controller */,
+				F4965E6D1FD2593E0085F213 /* Main.storyboard */,
+				F4965E701FD2593E0085F213 /* Assets.xcassets */,
+				F4965E721FD2593E0085F213 /* LaunchScreen.storyboard */,
+				F4965E751FD2593E0085F213 /* Info.plist */,
+				F41709BC1FFE3AF700A143E1 /* GoogleService-Info.plist */,
+			);
+			path = "Project 1";
+			sourceTree = "<group>";
+		};
+		F4F034281FD9010100691FF5 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4F034291FD9013800691FF5 /* KelompokCell.swift */,
+				F4F0342B1FD9404500691FF5 /* contactCollectCell.swift */,
+				F41017401FE26CD1006BBA3E /* ArtikelCell.swift */,
+				F470FEBF1FE3798400E9EFC4 /* ListContactTCell.swift */,
+				F41AC6C51FE385C300E8698C /* SelectedContactCollectCell.swift */,
+				F4F254261FE75E0700AB4574 /* AnggotaKelompokCell.swift */,
+				F4980EB61FEB4AD4000CF628 /* IsiBeritaCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4965E651FD2593E0085F213 /* INFO DISDIK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4965E781FD2593E0085F213 /* Build configuration list for PBXNativeTarget "INFO DISDIK" */;
+			buildPhases = (
+				5DB0019EF091A727647FFB5B /* [CP] Check Pods Manifest.lock */,
+				F4965E621FD2593E0085F213 /* Sources */,
+				F4965E631FD2593E0085F213 /* Frameworks */,
+				F4965E641FD2593E0085F213 /* Resources */,
+				CEBE161D3E279DB6A032ECA5 /* [CP] Embed Pods Frameworks */,
+				9D7E881AE72993EEE7425AED /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "INFO DISDIK";
+			productName = "Project 1";
+			productReference = F4965E661FD2593E0085F213 /* INFO DISDIK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4965E5E1FD2593E0085F213 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = SchoolDroid;
+				TargetAttributes = {
+					F4965E651FD2593E0085F213 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F4965E611FD2593E0085F213 /* Build configuration list for PBXProject "INFO DISDIK" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4965E5D1FD2593E0085F213;
+			productRefGroup = F4965E671FD2593E0085F213 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4965E651FD2593E0085F213 /* INFO DISDIK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4965E641FD2593E0085F213 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4965E741FD2593E0085F213 /* LaunchScreen.storyboard in Resources */,
+				F41709BD1FFE3AF700A143E1 /* GoogleService-Info.plist in Resources */,
+				F4965E711FD2593E0085F213 /* Assets.xcassets in Resources */,
+				F4965E6F1FD2593E0085F213 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DB0019EF091A727647FFB5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-INFO DISDIK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D7E881AE72993EEE7425AED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEBE161D3E279DB6A032ECA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4965E621FD2593E0085F213 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F414F1051FD7B94800E27FED /* BuatKelompokController.swift in Sources */,
+				F4F0342C1FD9404500691FF5 /* contactCollectCell.swift in Sources */,
+				F463FEF21FE9012E0029A1DC /* PilihAdmin.swift in Sources */,
+				F400CF161FE03B9500498D2F /* ArtikelBaru.swift in Sources */,
+				F44379C0200721C800EF445F /* Lokasi.swift in Sources */,
+				F458AA3C1FDFE06400A0FD3A /* DeviceModel.swift in Sources */,
+				F4181EEC1FEE4B8300C20D73 /* IsiBerita.swift in Sources */,
+				F41AC6CA1FE3AA6800E8698C /* AnggotaLite.swift in Sources */,
+				F4658C2A1FDBA476004B648B /* ListArtikel.swift in Sources */,
+				F4454D721FEDF8660056A2C0 /* STool.swift in Sources */,
+				F40209FD20027F7E00640BA7 /* ImageCache.swift in Sources */,
+				F41017411FE26CD1006BBA3E /* ArtikelCell.swift in Sources */,
+				F4980EB71FEB4AD4000CF628 /* IsiBeritaCell.swift in Sources */,
+				F410173D1FE250D2006BBA3E /* BeritaLite.swift in Sources */,
+				F410173B1FE24D2E006BBA3E /* Berita.swift in Sources */,
+				F4080CFE1FD53AF700C5EA78 /* ListKelompokController.swift in Sources */,
+				F4F254271FE75E0700AB4574 /* AnggotaKelompokCell.swift in Sources */,
+				F4307F681FE985CF00DA640F /* GPS.swift in Sources */,
+				F40ACC6F200DF8AF002BAD41 /* SharePopUp.swift in Sources */,
+				F44B2F631FE4CB9F004463A7 /* HandleKeyboard.swift in Sources */,
+				F41568A71FF889E000C87EB9 /* Simpan.swift in Sources */,
+				F4537B6920047F9A00B6BDF9 /* PathGrupLite.swift in Sources */,
+				F41AC6CE1FE3D2C200E8698C /* Authorization.swift in Sources */,
+				F44002A91FE0EFE300042FD2 /* KelompokLite.swift in Sources */,
+				F4DEBD3E1FDA906500FBC581 /* DetailArtikel.swift in Sources */,
+				F42125E91FE2F38900CB3FE1 /* AddContactNewKelompok.swift in Sources */,
+				F403EB1A2009AE4700020012 /* ViewBerita.swift in Sources */,
+				F46EBE4F200384A70028F70D /* AmbilNet.swift in Sources */,
+				F41AC6CC1FE3C89400E8698C /* Transformator.swift in Sources */,
+				F4574B6F200D9B680008EE80 /* EditIsiBerita.swift in Sources */,
+				F403EB162009A7FA00020012 /* ViewLikeList.swift in Sources */,
+				F40209F92002778B00640BA7 /* DummyData.swift in Sources */,
+				F426E5B1200079BB004B0BB0 /* Strings.swift in Sources */,
+				F44002A61FE0EE8800042FD2 /* Kelompok.swift in Sources */,
+				F403EB182009AD8B00020012 /* ViewBeritaLite.swift in Sources */,
+				F4965E6A1FD2593E0085F213 /* AppDelegate.swift in Sources */,
+				F44C78EA1FEC9E5800E29A64 /* SimpanNet.swift in Sources */,
+				F43EEBF41FE99C0A0015905B /* SettingLite.swift in Sources */,
+				F4F0342A1FD9013800691FF5 /* KelompokCell.swift in Sources */,
+				F46BE9771FF8C69B0007CB22 /* Anggota.swift in Sources */,
+				F449A6B01FFC0AE00086FBCD /* IsiBeritaLite.swift in Sources */,
+				F41AC6C61FE385C300E8698C /* SelectedContactCollectCell.swift in Sources */,
+				F4080CFA1FD534D600C5EA78 /* Daftar1Controller.swift in Sources */,
+				F41AC6C81FE3A92000E8698C /* Kontak.swift in Sources */,
+				F4F254251FE75DAD00AB4574 /* AnggotaKelompok.swift in Sources */,
+				F470FEC01FE3798400E9EFC4 /* ListContactTCell.swift in Sources */,
+				F4080CFC1FD5352300C5EA78 /* ProfileController.swift in Sources */,
+				F42D6E45200CB83900FF5243 /* SurveiController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4965E6D1FD2593E0085F213 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4965E6E1FD2593E0085F213 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4965E721FD2593E0085F213 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4965E731FD2593E0085F213 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4965E761FD2593E0085F213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4965E771FD2593E0085F213 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4965E791FD2593E0085F213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27CD5C843E58CB93B2902838 /* Pods-INFO DISDIK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "INFO DISDIK.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CG2Q6NUH6D;
+				INFOPLIST_FILE = "Project 1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.schooldroid.infodisdik-ios1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4965E7A1FD2593E0085F213 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8FED3BEF591678F89C9E82 /* Pods-INFO DISDIK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "INFO DISDIK.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CG2Q6NUH6D;
+				INFOPLIST_FILE = "Project 1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.schooldroid.infodisdik-ios1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4965E611FD2593E0085F213 /* Build configuration list for PBXProject "INFO DISDIK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4965E761FD2593E0085F213 /* Debug */,
+				F4965E771FD2593E0085F213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4965E781FD2593E0085F213 /* Build configuration list for PBXNativeTarget "INFO DISDIK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4965E791FD2593E0085F213 /* Debug */,
+				F4965E7A1FD2593E0085F213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4965E5E1FD2593E0085F213 /* Project object */;
+}
