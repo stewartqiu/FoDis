@@ -1,0 +1,258 @@
+
+/* Class = "UILabel"; text = "Asti Putri Indah"; ObjectID = "0fF-3s-WeX"; */
+"0fF-3s-WeX.text" = "Asti Putri Indah";
+
+/* Class = "UIButton"; normalTitle = "Bagikan Artikel"; ObjectID = "0gK-56-881"; */
+"0gK-56-881.normalTitle" = "Bagikan Artikel";
+
+/* Class = "UILabel"; text = "Kelompok ()"; ObjectID = "19W-mR-fjD"; */
+"19W-mR-fjD.text" = "Kelompok ()";
+
+/* Class = "UILabel"; text = "Contoh berita akhir"; ObjectID = "1Eh-wu-cCh"; */
+"1Eh-wu-cCh.text" = "Contoh berita akhir";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "1MJ-Ga-DZd"; */
+"1MJ-Ga-DZd.title" = " ";
+
+/* Class = "UILabel"; text = "18-07-2017"; ObjectID = "59Q-51-c5e"; */
+"59Q-51-c5e.text" = "18-07-2017";
+
+/* Class = "UITextField"; placeholder = "Nama Kelompok"; ObjectID = "5Ar-MT-uEV"; */
+"5Ar-MT-uEV.placeholder" = "Nama Kelompok";
+
+/* Class = "UIBarButtonItem"; title = "Batal"; ObjectID = "5nj-G7-ZH2"; */
+"5nj-G7-ZH2.title" = "Batal";
+
+/* Class = "UILabel"; text = "Bambang Wahyudi"; ObjectID = "7Uy-NV-0xE"; */
+"7Uy-NV-0xE.text" = "Bambang Wahyudi";
+
+/* Class = "UIButton"; normalTitle = "Jadikan Admin"; ObjectID = "88y-sx-Q5U"; */
+"88y-sx-Q5U.normalTitle" = "Jadikan Admin";
+
+/* Class = "UILabel"; text = "Daftar Berita ()"; ObjectID = "9gj-Ij-sS4"; */
+"9gj-Ij-sS4.text" = "Daftar Berita ()";
+
+/* Class = "UILabel"; text = "081208120812"; ObjectID = "AGr-cR-WcN"; */
+"AGr-cR-WcN.text" = "081208120812";
+
+/* Class = "UIButton"; normalTitle = "SIMPAN"; ObjectID = "C0b-uV-y1b"; */
+"C0b-uV-y1b.normalTitle" = "SIMPAN";
+
+/* Class = "UIViewController"; title = "Pilih Admin"; ObjectID = "C9a-02-6UA"; */
+"C9a-02-6UA.title" = "Pilih Admin";
+
+/* Class = "UILabel"; text = "Tampilkan Iklan pada Aplikasi"; ObjectID = "DfG-I2-qn1"; */
+"DfG-I2-qn1.text" = "Tampilkan Iklan pada Aplikasi";
+
+/* Class = "UILabel"; text = "Judul Contoh"; ObjectID = "EQq-RE-FjE"; */
+"EQq-RE-FjE.text" = "Judul Contoh";
+
+/* Class = "UIBarButtonItem"; title = "Simpan"; ObjectID = "Erm-zM-3wd"; */
+"Erm-zM-3wd.title" = "Simpan";
+
+/* Class = "UILabel"; text = "Anggota : 0"; ObjectID = "GD3-9x-e7U"; */
+"GD3-9x-e7U.text" = "Anggota : 0";
+
+/* Class = "UIButton"; normalTitle = "MINTA KODE"; ObjectID = "GST-Mj-s8U"; */
+"GST-Mj-s8U.normalTitle" = "MINTA KODE";
+
+/* Class = "UIButton"; normalTitle = "Berbayar"; ObjectID = "H43-PX-zcQ"; */
+"H43-PX-zcQ.normalTitle" = "Berbayar";
+
+/* Class = "UILabel"; text = "Rp 800,-/bulan"; ObjectID = "IZA-Jx-56b"; */
+"IZA-Jx-56b.text" = "Rp 800,-/bulan";
+
+/* Class = "UIButton"; normalTitle = "KIRIM ULANG"; ObjectID = "Iob-Re-Tuc"; */
+"Iob-Re-Tuc.normalTitle" = "KIRIM ULANG";
+
+/* Class = "UILabel"; text = "Pertanggung Jawaban Dana BOS Triwulan II Tahun 2017 dan Kertas Kerja BOS"; ObjectID = "JBz-3N-euK"; */
+"JBz-3N-euK.text" = "Pertanggung Jawaban Dana BOS Triwulan II Tahun 2017 dan Kertas Kerja BOS";
+
+/* Class = "UINavigationItem"; title = "Profil Info Disdik"; ObjectID = "KDe-PF-veU"; */
+"KDe-PF-veU.title" = "Profil Info Disdik";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "L0y-5L-CTB"; */
+"L0y-5L-CTB.title" = " ";
+
+/* Class = "UILabel"; text = "081208120812"; ObjectID = "M8z-Bv-8bB"; */
+"M8z-Bv-8bB.text" = "081208120812";
+
+/* Class = "UILabel"; text = "Silahkan PIilh Anggota : "; ObjectID = "M9e-SH-LQ6"; */
+"M9e-SH-LQ6.text" = "Silahkan PIilh Anggota : ";
+
+/* Class = "UILabel"; text = "Bambang Wahyudi"; ObjectID = "Mgq-NS-gZ4"; */
+"Mgq-NS-gZ4.text" = "Bambang Wahyudi";
+
+/* Class = "UILabel"; text = "#BOS #SURAT_EDARAN"; ObjectID = "NKh-ZX-vli"; */
+"NKh-ZX-vli.text" = "#BOS #SURAT_EDARAN";
+
+/* Class = "UIViewController"; title = "Dilihat Oleh"; ObjectID = "NTz-mD-qfd"; */
+"NTz-mD-qfd.title" = "Dilihat Oleh";
+
+/* Class = "UILabel"; text = "Isi Berita"; ObjectID = "NWb-Kl-nqY"; */
+"NWb-Kl-nqY.text" = "Isi Berita";
+
+/* Class = "UITextField"; placeholder = "Nomor HP"; ObjectID = "Nun-RW-eMI"; */
+"Nun-RW-eMI.placeholder" = "Nomor HP";
+
+/* Class = "UITextField"; text = "+62"; ObjectID = "Nun-RW-eMI"; */
+"Nun-RW-eMI.text" = "+62";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Oj1-nq-vlH"; */
+"Oj1-nq-vlH.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "SELANJUTNYA"; ObjectID = "Pnx-cX-tch"; */
+"Pnx-cX-tch.normalTitle" = "SELANJUTNYA";
+
+/* Class = "UILabel"; text = "SURVEI APLKASI"; ObjectID = "QOa-iY-GeH"; */
+"QOa-iY-GeH.text" = "SURVEI APLKASI";
+
+/* Class = "UITextField"; placeholder = "Kode Verifikasi"; ObjectID = "RrO-1N-fI0"; */
+"RrO-1N-fI0.placeholder" = "Kode Verifikasi";
+
+/* Class = "UILabel"; text = "Judul Artikel"; ObjectID = "SSK-0U-CEP"; */
+"SSK-0U-CEP.text" = "Judul Artikel";
+
+/* Class = "UILabel"; text = "Masukkan Nomor HP"; ObjectID = "Tgz-qe-sPt"; */
+"Tgz-qe-sPt.text" = "Masukkan Nomor HP";
+
+/* Class = "UILabel"; text = "Baby Hero"; ObjectID = "TjG-MG-1zJ"; */
+"TjG-MG-1zJ.text" = "Baby Hero";
+
+/* Class = "UINavigationItem"; title = "Artikel"; ObjectID = "U8U-ry-StI"; */
+"U8U-ry-StI.title" = "Artikel";
+
+/* Class = "UINavigationItem"; title = "Pilih Anggota"; ObjectID = "WQe-Vz-w3x"; */
+"WQe-Vz-w3x.title" = "Pilih Anggota";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Y9i-pP-H8E"; */
+"Y9i-pP-H8E.title" = " ";
+
+/* Class = "UILabel"; text = "Kata Kunci (#HashTag)"; ObjectID = "YGA-o0-myG"; */
+"YGA-o0-myG.text" = "Kata Kunci (#HashTag)";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "YV1-Am-g0L"; */
+"YV1-Am-g0L.title" = " ";
+
+/* Class = "UINavigationItem"; title = "Kelompok"; ObjectID = "ZAE-MF-CTv"; */
+"ZAE-MF-CTv.title" = "Kelompok";
+
+/* Class = "UILabel"; text = "(Belum Diterbitkan)"; ObjectID = "Zsu-h6-zGn"; */
+"Zsu-h6-zGn.text" = "(Belum Diterbitkan)";
+
+/* Class = "UITextView"; text = "Petunjuk\n(1) Masukkan Nomor Handphone Anda untuk dapat menerima Kode Verifikasi, yang akan kami kirimkan melalui SMS.\n\n(2) Jika belum menerima SMS, Anda dapat meminta ulang Kode Verifikasi, setelah satu menit dari permintaan terakhir.\n\n(3) Kami tidak spam, nomor Anda aman dengan kami"; ObjectID = "a5R-iM-jQC"; */
+"a5R-iM-jQC.text" = "Petunjuk\n(1) Masukkan Nomor Handphone Anda untuk dapat menerima Kode Verifikasi, yang akan kami kirimkan melalui SMS.\n\n(2) Jika belum menerima SMS, Anda dapat meminta ulang Kode Verifikasi, setelah satu menit dari permintaan terakhir.\n\n(3) Kami tidak spam, nomor Anda aman dengan kami";
+
+/* Class = "UINavigationItem"; title = "Buat Kelompok"; ObjectID = "aLI-cp-Bkj"; */
+"aLI-cp-Bkj.title" = "Buat Kelompok";
+
+/* Class = "UINavigationItem"; title = "Daftar"; ObjectID = "aVw-pI-dBC"; */
+"aVw-pI-dBC.title" = "Daftar";
+
+/* Class = "UILabel"; text = "Masukkan Kode Verifikasi"; ObjectID = "aep-o5-6bJ"; */
+"aep-o5-6bJ.text" = "Masukkan Kode Verifikasi";
+
+/* Class = "UIButton"; normalTitle = "Gratis"; ObjectID = "cZu-KZ-iIg"; */
+"cZu-KZ-iIg.normalTitle" = "Gratis";
+
+/* Class = "UILabel"; text = "Admin"; ObjectID = "cbN-DB-uvq"; */
+"cbN-DB-uvq.text" = "Admin";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "cvr-72-MaN"; */
+"cvr-72-MaN.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "dwj-dg-L4h"; */
+"dwj-dg-L4h.text" = "3";
+
+/* Class = "UINavigationItem"; title = "Sunting"; ObjectID = "e7W-UH-4pI"; */
+"e7W-UH-4pI.title" = "Sunting";
+
+/* Class = "UILabel"; text = "Pilih Penggunaan Server :"; ObjectID = "eap-l2-k9S"; */
+"eap-l2-k9S.text" = "Pilih Penggunaan Server :";
+
+/* Class = "UILabel"; text = "01-08-2017"; ObjectID = "efU-yR-4SB"; */
+"efU-yR-4SB.text" = "01-08-2017";
+
+/* Class = "UILabel"; text = "Ketua"; ObjectID = "f7A-5c-d1O"; */
+"f7A-5c-d1O.text" = "Ketua";
+
+/* Class = "UINavigationItem"; title = "Artikel Baru"; ObjectID = "f8a-qa-RtD"; */
+"f8a-qa-RtD.title" = "Artikel Baru";
+
+/* Class = "UILabel"; text = "KATA KUNCI ---"; ObjectID = "fje-wO-Mcp"; */
+"fje-wO-Mcp.text" = "KATA KUNCI ---";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gS2-iz-r10"; */
+"gS2-iz-r10.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Nama Anda"; ObjectID = "gez-o1-H6R"; */
+"gez-o1-H6R.placeholder" = "Nama Anda";
+
+/* Class = "UILabel"; text = "*) Tagihan maupun Iklan tidak akan muncul saat ini"; ObjectID = "iNA-ue-IH2"; */
+"iNA-ue-IH2.text" = "*) Tagihan maupun Iklan tidak akan muncul saat ini";
+
+/* Class = "UIButton"; normalTitle = "KIRIM"; ObjectID = "jlG-2I-82b"; */
+"jlG-2I-82b.normalTitle" = "KIRIM";
+
+/* Class = "UILabel"; text = "06-06-2018"; ObjectID = "k9x-iC-9ul"; */
+"k9x-iC-9ul.text" = "06-06-2018";
+
+/* Class = "UILabel"; text = "Bambang Wahyudi"; ObjectID = "lMq-I3-no7"; */
+"lMq-I3-no7.text" = "Bambang Wahyudi";
+
+/* Class = "UILabel"; text = "Tunggu SMS Kode Verifikasi"; ObjectID = "lb7-R6-QGD"; */
+"lb7-R6-QGD.text" = "Tunggu SMS Kode Verifikasi";
+
+/* Class = "UILabel"; text = "Oleh : Pusdatikomdik 18/07/2017"; ObjectID = "n4A-W5-9bR"; */
+"n4A-W5-9bR.text" = "Oleh : Pusdatikomdik 18/07/2017";
+
+/* Class = "UIButton"; normalTitle = "Buat Kelompok"; ObjectID = "pcw-hW-r6h"; */
+"pcw-hW-r6h.normalTitle" = "Buat Kelompok";
+
+/* Class = "UIButton"; normalTitle = "VERIFIKASI"; ObjectID = "qOV-4D-RR0"; */
+"qOV-4D-RR0.normalTitle" = "VERIFIKASI";
+
+/* Class = "UILabel"; text = "Tanggal"; ObjectID = "qU8-Mx-CNQ"; */
+"qU8-Mx-CNQ.text" = "Tanggal";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "rhz-bl-WyP"; */
+"rhz-bl-WyP.title" = " ";
+
+/* Class = "UILabel"; text = "Baby Hero"; ObjectID = "sQQ-IG-oTx"; */
+"sQQ-IG-oTx.text" = "Baby Hero";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "t19-vK-3Ei"; */
+"t19-vK-3Ei.text" = "3";
+
+/* Class = "UILabel"; text = "Jumlah Anggota : 0"; ObjectID = "tRH-pa-PJ8"; */
+"tRH-pa-PJ8.text" = "Jumlah Anggota : 0";
+
+/* Class = "UINavigationItem"; title = "Nama Kelompok"; ObjectID = "uVq-dH-onO"; */
+"uVq-dH-onO.title" = "Nama Kelompok";
+
+/* Class = "UILabel"; text = "Pertanggung Jawaban Dana BOS Triwulan II Tahun 2017 dan Kertas Kerja BOS"; ObjectID = "v4L-K4-uif"; */
+"v4L-K4-uif.text" = "Pertanggung Jawaban Dana BOS Triwulan II Tahun 2017 dan Kertas Kerja BOS";
+
+/* Class = "UILabel"; text = "#Kata Kunci"; ObjectID = "wOX-RB-FWy"; */
+"wOX-RB-FWy.text" = "#Kata Kunci";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "y2e-Gb-p95"; */
+"y2e-Gb-p95.text" = "5";
+
+/* Class = "UIBarButtonItem"; title = "Simpan"; ObjectID = "y2j-aw-Ozw"; */
+"y2j-aw-Ozw.title" = "Simpan";
+
+/* Class = "UILabel"; text = "Arief Setiawan"; ObjectID = "yD5-5T-6aN"; */
+"yD5-5T-6aN.text" = "Arief Setiawan";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "yPI-gK-dkd"; */
+"yPI-gK-dkd.text" = "3";
+
+/* Class = "UILabel"; text = "... Selengkapnya"; ObjectID = "yuE-Xi-qFV"; */
+"yuE-Xi-qFV.text" = "... Selengkapnya";
+
+/* Class = "UILabel"; text = "Nomor Handphone"; ObjectID = "zPb-0N-ebD"; */
+"zPb-0N-ebD.text" = "Nomor Handphone";
+
+/* Class = "UILabel"; text = "Bagikan ke Kelompok :"; ObjectID = "zzi-cs-nNi"; */
+"zzi-cs-nNi.text" = "Bagikan ke Kelompok :";
