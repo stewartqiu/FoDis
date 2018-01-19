@@ -13,10 +13,10 @@ import Kingfisher
 class ProfileController: UIViewController , UINavigationControllerDelegate , UIImagePickerControllerDelegate{
     
     @IBOutlet weak var imageView: UIImageView!
-    var selectedImage : UIImage?
     @IBOutlet weak var namaTextField: UITextField!
     @IBOutlet weak var btnLanjut: UIButton!
     
+    var selectedImage : UIImage?
     var lat = String()
     var long = String()
     var negara = String()

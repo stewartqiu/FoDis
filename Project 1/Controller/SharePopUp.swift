@@ -95,6 +95,21 @@ class SharePopUp: UIViewController , UITableViewDelegate , UITableViewDataSource
             Simpan.isiBerita(isTest: self.isTest, negara: kelompokSelected.negara!, prov: kelompokSelected.provinsi!, kota: kelompokSelected.kota!, idGrup: kelompokSelected.id!, idBerita: idBerita, idIsi: newIdIsi, berita: isiBerita.berita!, fileUrl: isiBerita.fileUrl!, foto: isiBerita.foto!)
         }
         
+        
+        var beritaKel = BeritaLite().getFiltered(key: BeritaLite().idKelompok_key, value: kelompokSelected.id!)
+        beritaKel.sort { (berita1, berita2) -> Bool in
+            return berita1.idBerita! < berita2.idBerita!
+        }
+        
+        var lastPublishedBerita = ""
+        for berita in beritaKel {
+            if berita.publish == "T" {
+                lastPublishedBerita = berita.idBerita!
+            }
+        }
+        
+        Simpan.updateBeritaAkhir(isTest: isTest, negara: kelompokSelected.negara!, prov: kelompokSelected.negara!, kota: kelompokSelected.kota!, idGrup: kelompokSelected.id!, idBerita: lastPublishedBerita)
+        
         SVProgressHUD.dismiss()
         self.dismiss(animated: true, completion: nil)
         SVProgressHUD.showSuccess(withStatus: "Artikel berhasil dibagikan ke Grup \(kelompokSelected.nama!)")

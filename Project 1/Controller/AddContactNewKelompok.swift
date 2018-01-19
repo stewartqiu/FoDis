@@ -56,25 +56,25 @@ class AddContactNewKelompok: UIViewController , UICollectionViewDelegate, UIColl
         
         if isTest{
             showRegisAlert()
-        }
-        
-        let contactArray = STool.fetchContacts()
-        
-        let persHp = SettingLite().getFiltered(keyfile: SettingKey.noHp)!
-        
-        for contact in contactArray {
-            let kontak = Kontak()
-            kontak.nama = contact.givenName + " " + contact.familyName
-            var noHp = Transformator.getNumberFromContactObj(contact: contact)
-            if noHp.first == "0" {
-                noHp.removeFirst()
-                noHp = "62" + noHp
-            } else if noHp.first == "+"{
-                noHp.removeFirst()
-            }
-            kontak.nomorHp = noHp
-            if noHp != persHp{
-                self.contactArray.append(kontak)
+        } else {
+            let contactArray = STool.fetchContacts()
+            
+            let persHp = SettingLite().getFiltered(keyfile: SettingKey.noHp)!
+            
+            for contact in contactArray {
+                let kontak = Kontak()
+                kontak.nama = contact.givenName + " " + contact.familyName
+                var noHp = Transformator.getNumberFromContactObj(contact: contact)
+                if noHp.first == "0" {
+                    noHp.removeFirst()
+                    noHp = "62" + noHp
+                } else if noHp.first == "+"{
+                    noHp.removeFirst()
+                }
+                kontak.nomorHp = noHp
+                if noHp != persHp{
+                    self.contactArray.append(kontak)
+                }
             }
         }
         

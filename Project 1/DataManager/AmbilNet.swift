@@ -177,46 +177,46 @@ class AmbilNet {
                 
                 var adminList = "", beritaAkhir = "" , deskripsi = "" , foto = "" , idGrup = "" , idKetua = "" , jumlahAnggota = "" , jumlahBerita = "" , namaGrup = "" , namaKetua = "" , pinGrup = "" , status = "" , tanggalBuat = "" , lastFoto = ""
                 if let adminval = value["AdminList"] {
-                    adminList = adminval
+                    if adminval != "null" { adminList = adminval }
                 }
                 if let beritaAkhirVal = value["BeritaAkhir"] {
-                    beritaAkhir = beritaAkhirVal
+                    if beritaAkhirVal != "null" { beritaAkhir = beritaAkhirVal }
                 }
                 if let deskripsiVal = value["DeskripsiGrup"] {
-                    deskripsi = deskripsiVal
+                    if deskripsiVal != "null" { deskripsi = deskripsiVal }
                 }
                 if let fotoVal = value["FotoGrup"]{
-                    foto = fotoVal
+                    if fotoVal != "null" { foto = fotoVal }
                 }
                 if let idGrupVal = value["IDGrup"]{
-                    idGrup = idGrupVal
+                    if idGrupVal != "null" { idGrup = idGrupVal }
                 }
                 if let idKetuaVal = value["IDKetua"]{
-                    idKetua = idKetuaVal
+                    if idKetuaVal != "null" { idKetua = idKetuaVal }
                 }
                 if let jumlahAnggotaVal = value["JlhAnggota"]{
-                    jumlahAnggota = jumlahAnggotaVal
+                    if jumlahAnggotaVal != "null" { jumlahAnggota = jumlahAnggotaVal }
                 }
                 if let jumlahBeritaVal = value["JlhBerita"]{
-                    jumlahBerita = jumlahBeritaVal
+                    if jumlahBeritaVal != "null" {jumlahBerita = jumlahBeritaVal}
                 }
                 if let namaGrupVal = value["NamaGrup"]{
-                    namaGrup = namaGrupVal
+                    if namaGrupVal != "null" {namaGrup = namaGrupVal}
                 }
                 if let namaKetuaVal = value["NamaKetua"]{
-                    namaKetua = namaKetuaVal
+                    if namaKetuaVal != "null" {namaKetua = namaKetuaVal}
                 }
                 if let pinGrupVal = value["PinGrup"]{
-                    pinGrup = pinGrupVal
+                    if pinGrupVal != "null" {pinGrup = pinGrupVal}
                 }
                 if let statusVal = value["Status"]{
-                    status = statusVal
+                    if statusVal != "null" {status = statusVal}
                 }
                 if let tanggalBuatVal = value["TglBuat"]{
-                    tanggalBuat = tanggalBuatVal
+                    if tanggalBuatVal != "null" {tanggalBuat = tanggalBuatVal}
                 }
                 if let lastFotoVal = value["LastFoto"]{
-                    lastFoto = lastFotoVal
+                    if lastFotoVal != "null" {lastFoto = lastFotoVal}
                 }
                 
                 let pathPisah = pathGrup.components(separatedBy: "/")

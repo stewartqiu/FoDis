@@ -10,9 +10,13 @@ import Foundation
 
 class Simpan {
     
+
+    
     static func hpList (noHp : String , negara : String , provinsi : String , kota : String){
         SimpanNet.hpList(noHp: noHp, negara: negara, prov: provinsi, kota: kota)
     }
+    
+    
     
     static func pendudukLokasi (noHp : String, negara : String, prov: String, kab : String , kec : String , kel : String, kodepos : String, alamat : String , lat : String , long : String) {
         
@@ -28,6 +32,9 @@ class Simpan {
         let _ = setting.insertData(keyfile: SettingKey.long, value: long)
     }
     
+    
+    
+    
     static func pendudukProfile (negara : String , prov : String , kota : String , noHp : String , persId : String, email : String , fbId : String , foto : String , nama : String , password : String, pin : String, tanggalJoin : String) {
         
         SimpanNet().pendudukProfile(negara: negara, prov: prov, kota: kota, noHp: noHp, persId: persId, email: email, fbId: fbId, foto: foto, nama: nama, password: password, pin: pin, tanggalJoin: tanggalJoin, completion: nil)
@@ -38,6 +45,10 @@ class Simpan {
         let _ = setting.insertData(keyfile: SettingKey.nama, value: nama)
         let _ = setting.insertData(keyfile: SettingKey.pin, value: pin)
     }
+    
+    
+    
+    
     
     static func settingAplikasi(negara : String , prov : String , kota : String , kec : String , kel : String , alamat : String , kodepos : String , latitude : String , longitude : String , persId : String  , noHp : String , nama : String,  pinPersonal : String , tanggalJoin : String) {
         
@@ -52,6 +63,10 @@ class Simpan {
         
     }
     
+    
+    
+    
+    
     static func updateNama (negara : String , prov : String , kota : String , noHp : String, nama : String) {
         
         SimpanNet().updateNama(negara: negara, prov: prov, kota: kota, noHp: noHp, nama: nama)
@@ -59,6 +74,10 @@ class Simpan {
         let setting = SettingLite()
         let _ = setting.insertData(keyfile: SettingKey.nama, value: nama)
     }
+    
+    
+    
+    
     
     static func updateFotoUrlPenduduk(negara : String , prov : String , kota : String, noHp : String , url : String){
         
@@ -68,11 +87,15 @@ class Simpan {
         let _ = setting.insertData(keyfile: SettingKey.foto, value: url)
     }
     
+    
+    
+    
     static func updateImageUrlGrup (negara : String , prov : String , kota : String , idGrup : String, url : String) {
-        
         SimpanNet().updateImageUrlGrup(negara: negara, prov: prov, kota: kota, idGrup: idGrup, url: url)
-        
     }
+    
+    
+    
     
     static func kelompok (isTest : Bool ,negara : String , prov : String , kota : String , idKelompok : String , namaKelompok : String , deskripsiKelompok : String, tanggalBuat : String , idKetua : String , namaKetua : String , admin : String , jumlahAnggota : String , jumlahBerita : String , beritaAkhir : String , fotoGrup : String , pinGrup : String , status : String , lastFoto : String) {
         if !isTest {
@@ -80,6 +103,9 @@ class Simpan {
         }
         let _ = KelompokLite().simpanData(idKelompok: idKelompok, namaKelompok: namaKelompok, deskripsiKelompok: deskripsiKelompok, tanggalBuat: tanggalBuat, idKetua: idKetua, namaKetua: namaKetua, admin: admin, beritaAkhir: beritaAkhir, foto: fotoGrup, pin: pinGrup, status: status, jumlahBerita: jumlahBerita, lastFoto: lastFoto, jumlahAnggota: jumlahAnggota, negara: negara, provinsi: prov, kota: kota)
     }
+    
+    
+    
     
     
     static func anggota (isTest : Bool ,negaraKel : String , provKel : String , kotaKel : String , idLink : String , idGrup : String , hpAnggota : String , addedBy : String , allowedPin : String , namaAnggota : String , pathFoto : String , permission : String , tglInvite : String , promotedBy : String , removedBy : String) {
@@ -90,12 +116,18 @@ class Simpan {
     }
     
     
+    
+    
+    
     static func beritaData (isTest : Bool, negaraKel : String , provKel : String , kotaKel : String , idBerita : String , idGrup : String , judul : String , kataKunci : String, created : String , createdBy : String , publish : String , published : String , tanggal : String , totLike : String , totView : String , unpublished : String) {
         if !isTest {
             SimpanNet().beritaData(negara: negaraKel, prov: provKel, kota: kotaKel, idGrup: idGrup, idBerita: idBerita, created: created, createdBy: createdBy, judul: judul, kataKunci: kataKunci, publish: publish, published: published, tanggal: tanggal, totLike: totLike, totView: totView, unpublished: unpublished)
         }
         let _ = BeritaLite().simpanData(idBerita: idBerita, idGrup: idGrup, judul: judul, kataKunci: kataKunci, created: created, createdBy: createdBy, publish: publish, published: published, tanggal: tanggal, totLike: totLike, totView: totView, unpublished: unpublished)
     }
+    
+    
+    
     
     static func isiBerita (isTest : Bool, negara : String , prov : String , kota : String , idGrup : String , idBerita : String , idIsi : String , berita : String , fileUrl : String , foto : String) {
         if !isTest {
@@ -106,6 +138,9 @@ class Simpan {
         
     }
     
+    
+    
+    
     static func viewBerita (isTest : Bool , negaraKel : String , provKel : String , kotaKel : String , idGrup : String , idBerita : String , idView : String , hpAnggota : String , like : String , tglLike : String , tglView : String) {
         if !isTest {
             SimpanNet().viewBerita(negara: negaraKel, prov: provKel, kota: kotaKel, idGrup: idGrup, idBerita: idBerita, idView: idView, hpAnggota: hpAnggota, like: like, tglLike: tglLike, tglView: tglView)
@@ -113,6 +148,9 @@ class Simpan {
         
         let _ = ViewBeritaLite().simpanData(idView: idView, idBerita: idBerita, hpAnggota: hpAnggota, tglView: tglView, like: like, tglLike: tglLike)
     }
+    
+    
+    
     
     static func updateBeritaAkhir (isTest : Bool , negara : String , prov : String , kota : String , idGrup : String , idBerita : String){
         if !isTest {
@@ -124,6 +162,8 @@ class Simpan {
         let _ =  KelompokLite().simpanData(idKelompok: kelompok.id!, namaKelompok: kelompok.nama!, deskripsiKelompok: kelompok.deskripsi!, tanggalBuat: kelompok.timeStamp!, idKetua: kelompok.idKetua!, namaKetua: kelompok.namaKetua!, admin: kelompok.admin!, beritaAkhir: idBerita, foto: kelompok.foto!, pin: kelompok.pin!, status: kelompok.status!, jumlahBerita: kelompok.jumlahBerita!, lastFoto: kelompok.id!, jumlahAnggota: kelompok.jumlahAnggota!, negara: kelompok.negara!, provinsi: kelompok.provinsi!, kota: kelompok.kota!)
     }
     
+    
+    
     static func deleteAnggota (isTest : Bool , negaraKel : String , provKel : String , kotaKel : String , idGrup : String , hpToDelete : String , idLink : String) {
         if !isTest {
             SimpanNet().deleteGrupAnggota(negaraKel: negaraKel, provKel: provKel, kotaKel: kotaKel, idGrup: idGrup, hpToDelete: hpToDelete)
@@ -132,8 +172,16 @@ class Simpan {
         
         let _ = AnggotaLite().deleteData(idLink: idLink)
     }
-
     
+    
+    
+    
+    static func updateNamaDanFotoOnGrup (grupPath : String , nama : String , url : String){
+        let noHp = SettingLite().getFiltered(keyfile: SettingKey.noHp)!
+        
+        SimpanNet().updateNamaOnGrup(grupPath: grupPath, noHp: noHp, nama: nama)
+        SimpanNet().updateFotoUrlOnGrup(grupPath: grupPath, noHp: noHp, url: url)
+    }
     
     
 }

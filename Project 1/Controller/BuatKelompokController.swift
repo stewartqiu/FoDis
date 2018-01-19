@@ -43,6 +43,8 @@ class BuatKelompokController: UIViewController , UITextFieldDelegate , UICollect
     
     var inDeleteMode = false
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -193,12 +195,20 @@ class BuatKelompokController: UIViewController , UITextFieldDelegate , UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contactCollecView", for: indexPath) as! contactCollectCell
+        cell.contactImage.layer.cornerRadius = cell.contactImage.frame.height / 2
         
         if isEdit {
             
             let anggotaAtIndex = anggotaArray[indexPath.row]
             
             cell.contactNameLabel.text = anggotaAtIndex.namaAnggota
+            if anggotaAtIndex.pathFoto != nil && anggotaAtIndex.pathFoto != "" && anggotaAtIndex.pathFoto != "null" {
+                cell.contactImage.kf.indicatorType = .activity
+                cell.contactImage.kf.setImage(with: URL(string: anggotaAtIndex.pathFoto!), placeholder: #imageLiteral(resourceName: "kontak"))
+            } else {
+                cell.contactImage.image = #imageLiteral(resourceName: "kontak")
+            }
+            
             
             if inDeleteMode {
                 if kelompokToEdit.idKetua! == anggotaAtIndex.hpAnggota! || persHp == anggotaAtIndex.hpAnggota!{
@@ -272,6 +282,11 @@ class BuatKelompokController: UIViewController , UITextFieldDelegate , UICollect
         else {
             selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         }
+        
+//        if picker.sourceType == .camera {
+//            UIImageWriteToSavedPhotosAlbum(selectedImage!, self, #selector(cameraSave(_:didFinishSavingWithError:contextInfo:)), nil)
+//        }
+        
         kelompokImage.image = selectedImage
         dismiss(animated: true, completion: nil)
         checkComplete()
@@ -299,6 +314,42 @@ class BuatKelompokController: UIViewController , UITextFieldDelegate , UICollect
     func getKontak(kontakArray: [Kontak]) {
         addedContactArray = kontakArray
     }
+    
+    // MARK: - ACTION
+    // ************************************************************************
+    
+    @objc func showDropDown() {
+        
+        dropDown.show()
+    }
+    
+    @objc func kelompokImagePressed () {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAct = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        let kameraAct = UIAlertAction(title: "Kamera", style: .default) { (_) in
+            STool.openKamera(sender: self, editable: true)
+        }
+        let fotoAct = UIAlertAction(title: "Pilih Foto", style: .default) { (_) in
+            STool.openPhotoLibrary(sender: self, editable: true)
+        }
+        
+        alert.addAction(cancelAct)
+        alert.addAction(kameraAct)
+        alert.addAction(fotoAct)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func cameraSave(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        STool.fetchLastImage { (localIdentifier) in
+            
+        }
+    }
+    
+//    @objc func cameraSave(){
+
+//    }
     
     // MARK: - FUNCTION
     // ************************************************************************
@@ -450,36 +501,10 @@ class BuatKelompokController: UIViewController , UITextFieldDelegate , UICollect
         dropDown.index
         
     }
-    
-    
-    @objc func showDropDown() {
-        
-        dropDown.show()
-    }
-    
+
     func imageKelompokConfig () {
-        
         kelompokImage.layer.cornerRadius = kelompokImage.frame.height / 2
         kelompokImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(kelompokImagePressed)))
-        
-    }
-    
-    @objc func kelompokImagePressed () {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let cancelAct = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
-        let kameraAct = UIAlertAction(title: "Kamera", style: .default) { (_) in
-            STool.openKamera(sender: self, editable: true)
-        }
-        let fotoAct = UIAlertAction(title: "Pilih Foto", style: .default) { (_) in
-            STool.openPhotoLibrary(sender: self, editable: true)
-        }
-        
-        alert.addAction(cancelAct)
-        alert.addAction(kameraAct)
-        alert.addAction(fotoAct)
-        
-        present(alert, animated: true, completion: nil)
     }
     
     func deleteAnggota (anggota : Anggota) {
@@ -493,6 +518,8 @@ class BuatKelompokController: UIViewController , UITextFieldDelegate , UICollect
             Simpan.deleteAnggota(isTest: self.isTest, negaraKel: self.kelompokToEdit.negara!, provKel: self.kelompokToEdit.provinsi!, kotaKel: self.kelompokToEdit.kota!, idGrup: self.kelompokToEdit.id!, hpToDelete: anggota.hpAnggota!, idLink: anggota.idLink!)
             
             Simpan.kelompok(isTest: self.isTest, negara: self.kelompokToEdit.negara!, prov: self.kelompokToEdit.provinsi!, kota: self.kelompokToEdit.kota!, idKelompok: self.kelompokToEdit.id!, namaKelompok: self.kelompokToEdit.nama!, deskripsiKelompok: self.kelompokToEdit.deskripsi!, tanggalBuat: self.kelompokToEdit.timeStamp!, idKetua: self.kelompokToEdit.idKetua!, namaKetua: self.kelompokToEdit.namaKetua!, admin: self.kelompokToEdit.admin!, jumlahAnggota: self.kelompokToEdit.jumlahAnggota!, jumlahBerita: self.kelompokToEdit.jumlahBerita!, beritaAkhir: self.kelompokToEdit.beritaAkhir!, fotoGrup: self.kelompokToEdit.foto!, pinGrup: self.kelompokToEdit.pin!, status: self.kelompokToEdit.status!, lastFoto: self.kelompokToEdit.lastFoto!)
+            
+            SimpanNet().statistikGrupList(negara: self.kelompokToEdit.negara!, prov: self.kelompokToEdit.provinsi!, kota: self.kelompokToEdit.kota!, idGrup: self.kelompokToEdit.id!, namaGrup: self.kelompokToEdit.nama!, jumlahAnggota: self.kelompokToEdit.jumlahAnggota!, jumlahBerita: self.kelompokToEdit.jumlahBerita!)
             
             self.loadAnggota()
             

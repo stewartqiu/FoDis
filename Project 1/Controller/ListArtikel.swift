@@ -91,7 +91,7 @@ class ListArtikel: UIViewController , UITableViewDelegate , UITableViewDataSourc
             artikelAtIndex = beritaArray[indexPath.row]
         }
         
-        if artikelAtIndex.unpublished == nil || artikelAtIndex.unpublished!.isEmpty{
+        if artikelAtIndex.unpublished == nil || artikelAtIndex.unpublished!.isEmpty || artikelAtIndex.unpublished == "null"{
         
             cell.judulLabel.text = artikelAtIndex.judul
             cell.keywordLabel.text = artikelAtIndex.kataKunci
@@ -119,15 +119,17 @@ class ListArtikel: UIViewController , UITableViewDelegate , UITableViewDataSourc
                     if lastFotoUrl.isEmpty{
                         lastFotoUrl = isi.fileUrl!
                     }
+                }  else if isi.fileUrl != nil && !isi.fileUrl!.isEmpty && isi.fileUrl! != "null" && isi.fileUrl! != "nil" {
+                    jumlahFile += 1
                 }
-                if isi.berita != nil && !isi.berita!.isEmpty{
+                if isi.berita != nil && !isi.berita!.isEmpty && isi.berita != "null" {
                     if firstBerita.isEmpty {
                         firstBerita = isi.berita!
                     }
                 }
             }
         
-            if lastFotoUrl != "" {
+            if lastFotoUrl != "" && lastFotoUrl != "null"{
                 let url = URL(string: lastFotoUrl)
                 cell.imageLampiran.kf.indicatorType = .activity
                 cell.imageLampiran.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "image"))
@@ -135,7 +137,7 @@ class ListArtikel: UIViewController , UITableViewDelegate , UITableViewDataSourc
                 cell.imageLampiran.image = #imageLiteral(resourceName: "image")
             }
         
-            if firstBerita != ""{
+            if firstBerita != "" && firstBerita != "null"{
                 cell.isiLabel.text = firstBerita
             } else {
                 cell.isiLabel.text = "... Selengkapnya"
@@ -150,7 +152,7 @@ class ListArtikel: UIViewController , UITableViewDelegate , UITableViewDataSourc
                 pembuat = artikelAtIndex.createdBy!
             }
             
-            cell.lampiranPenulisLabel.text = "[Lampiran : \(jumlahFoto) foto 0 file] \(pembuat)"
+            cell.lampiranPenulisLabel.text = "[Lampiran : \(jumlahFoto) foto \(jumlahFile) file] \(pembuat)"
             
             let viewArray = ViewBeritaLite().getFiltered(key: ViewBeritaLite().idBerita_key, value: artikelAtIndex.idBerita!)
             
@@ -185,7 +187,7 @@ class ListArtikel: UIViewController , UITableViewDelegate , UITableViewDataSourc
         }
         
         if artikelAtIndex.unpublished == nil || artikelAtIndex.unpublished!.isEmpty{
-            return 90
+            return 100
         } else {
             return 0
         }

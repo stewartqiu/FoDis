@@ -1,0 +1,6 @@
+framework module Pods_INFO_DISDIK {
+  umbrella header "Pods-INFO DISDIK-umbrella.h"
+
+  export *
+  module * { export * }
+}

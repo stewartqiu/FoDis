@@ -86,11 +86,7 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
         }
         
     }
-    
-
-    @IBAction func likeBtnAction(_ sender: Any) {
-    }
-    
+        
     // MARK: - OVERRIDE
     // ************************************************************************
     
@@ -154,42 +150,48 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
         
         let isiAtIndex = isiBeritaArray[indexPath.row]
         
-        if isiAtIndex.fileUrl!.isEmpty && isiAtIndex.foto!.isEmpty{
+        if isiAtIndex.fileUrl!.isEmpty || isiAtIndex.fileUrl == "null" {
             let text = isiAtIndex.berita!
             cell.bubbleWidthAnchor?.constant = estimateFrameForText(text).width + 32
             cell.textView.text = text
             cell.textView.isHidden = false
             cell.bubbleView.backgroundColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)
             cell.messageImageView.isHidden = true
-        } else {
-            
-            if !isiAtIndex.foto!.isEmpty {
+            cell.fileView.isHidden = true
+        } else if !isiAtIndex.foto!.isEmpty && isiAtIndex.foto! != "null" {
                 
-                if isiAtIndex.fileUrl! == "kertaskerja.gambarsampel" {
-                    cell.messageImageView.image = #imageLiteral(resourceName: "KertasKerja")
-                    cell.controller = self
-                }
-                else {
-                    let url = URL(string: isiAtIndex.fileUrl!)
-                    let placeholder = UIImage(named: "image")
-                    cell.messageImageView.kf.setImage(with: url, placeholder: placeholder, completionHandler: {
-                        (image, error, cacheType, imageUrl) in
-                        cell.controller = self
-                    })
-                    cell.messageImageView.kf.indicatorType = .activity
-                }
-              
-                
-                cell.messageImageView.isHidden = false
-                cell.textView.isHidden = true
-                cell.bubbleView.backgroundColor = UIColor.clear
-                cell.bubbleWidthAnchor?.constant = UIScreen.main.bounds.width / 2
-                
-            } else {
-                cell.messageImageView.isHidden = true
+            if isiAtIndex.fileUrl! == "kertaskerja.gambarsampel" {
+                cell.messageImageView.image = #imageLiteral(resourceName: "KertasKerja")
+                cell.controller = self
             }
+            else {
+                let url = URL(string: isiAtIndex.fileUrl!)
+                let placeholder = UIImage(named: "image")
+                cell.messageImageView.kf.setImage(with: url, placeholder: placeholder, completionHandler: {
+                    (image, error, cacheType, imageUrl) in
+                    cell.controller = self
+                })
+                cell.messageImageView.kf.indicatorType = .activity
+            }
+              
+            cell.fileView.isHidden = true
+            cell.messageImageView.isHidden = false
+            cell.textView.isHidden = true
+            cell.bubbleView.backgroundColor = UIColor.clear
+            cell.bubbleWidthAnchor?.constant = UIScreen.main.bounds.width / 2
+                
+        } else {
+            cell.messageImageView.isHidden = true
+            cell.textView.isHidden = true
+            cell.fileView.isHidden = false
+            cell.bubbleWidthAnchor?.constant = UIScreen.main.bounds.width - 30
             
+            let namaFile = isiAtIndex.berita!
+            
+            cell.labelFile.text = namaFile
+            if namaFile.contains(".csv"){cell.iconFile.image = #imageLiteral(resourceName: "csv")} else if namaFile.contains(".doc"){cell.iconFile.image = #imageLiteral(resourceName: "doc")} else if namaFile.contains(".pdf"){cell.iconFile.image = #imageLiteral(resourceName: "pdf")} else if namaFile.contains(".rar"){cell.iconFile.image = #imageLiteral(resourceName: "rar")} else if namaFile.contains(".txt"){cell.iconFile.image = #imageLiteral(resourceName: "txt")} else if namaFile.contains(".xls"){cell.iconFile.image = #imageLiteral(resourceName: "xls")} else if namaFile.contains(".zip"){cell.iconFile.image = #imageLiteral(resourceName: "zip")} else {cell.iconFile.image = #imageLiteral(resourceName: "unknown_file")}
         }
+            
         
         if currentBerita.publish != "T" {
             cell.controller1 = self
@@ -206,10 +208,12 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
         let width = UIScreen.main.bounds.width
         var height = CGFloat()
         
-         if isiAtIndex.fileUrl!.isEmpty {
+         if isiAtIndex.fileUrl!.isEmpty || isiAtIndex.fileUrl! == "null" {
             height = estimateFrameForText(isiAtIndex.berita!).height + 20
-         } else {
+         } else if !isiAtIndex.foto!.isEmpty && isiAtIndex.foto! != "null" {
             height = UIScreen.main.bounds.width / 2
+         } else {
+            height = 70
         }
         
         return CGSize(width: width, height: height)
@@ -324,7 +328,6 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
         labelTerbit.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -3).isActive = true
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: containerView)
-        
     }
    
     
@@ -379,6 +382,8 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
     
     
     @objc func terbitkan (){
+        
+        inputTextView.resignFirstResponder()
         
         let alert = UIAlertController(title: "Publikasikan Berita", message: "Anda tidak dapat melakukan penambahan/mengubah Isi Berita setelah berita diterbitkan.\n\nApakah Anda Yakin?", preferredStyle: .alert)
         let actionTidak = UIAlertAction(title: "TIDAK", style: .cancel, handler: nil)
@@ -503,7 +508,7 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
         
         judulLabel.text = currentBerita.judul!
         keywordLabel.text = currentBerita.kataKunci!
-        penulisTanggalLabel.text = "\(creatorId) \(currentBerita.tanggal!)"
+        penulisTanggalLabel.text = "\(namaPembuat) \(currentBerita.tanggal!)"
         jlhViewLabel.text = currentBerita.totView!
         jlhLikeLabel.text = currentBerita.totLike!
         
@@ -655,8 +660,6 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
             if view.hpAnggota == persHp{
                 if view.like! == "T"{
                     isLiked = true
-                } else {
-                    isLiked = false
                 }
                 myViewData = view
             }
@@ -678,7 +681,11 @@ class DetailArtikel: UIViewController, UIDocumentPickerDelegate, UITextViewDeleg
     
     func updateBeritaAkhir() {
         
-        let beritaArray = BeritaLite().getFiltered(key: BeritaLite().idKelompok_key, value: kelompok.id!)
+        var beritaArray = BeritaLite().getFiltered(key: BeritaLite().idKelompok_key, value: kelompok.id!)
+        
+        beritaArray.sort { (berita1, berita2) -> Bool in
+            return berita1.idBerita! < berita2.idBerita!
+        }
         
         var lastPublishedBerita = ""
         

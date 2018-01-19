@@ -33,7 +33,7 @@ class IsiBeritaCell: UICollectionViewCell {
     
     lazy var bubbleView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)  //UIColor(r: 0, g: 137, b: 249)
+        view.backgroundColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 16
         view.layer.masksToBounds = true
@@ -62,6 +62,53 @@ class IsiBeritaCell: UICollectionViewCell {
         return imageView
     }()
     
+    
+    let fileView : UIView = {
+       
+        let containerView = UIView()
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.layer.cornerRadius = 16
+        containerView.layer.masksToBounds = true
+        containerView.backgroundColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
+        return containerView
+    }()
+    
+    let iconFile : UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.masksToBounds = true
+        imageView.image = #imageLiteral(resourceName: "txt")
+        imageView.backgroundColor = UIColor.clear
+        imageView.contentMode = .scaleAspectFit
+        imageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        return imageView
+    } ()
+    
+    let labelFile : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.layer.masksToBounds = true
+        label.backgroundColor = UIColor.clear
+        label.numberOfLines = 2
+        label.font = label.font.withSize(15)
+        label.text = "Judul file.txt"
+        return label
+    }()
+    
+    let downloadImage : UIImageView = {
+        let downloadImage = UIImageView()
+        downloadImage.translatesAutoresizingMaskIntoConstraints = false
+        downloadImage.layer.masksToBounds = true
+        downloadImage.image = #imageLiteral(resourceName: "download_black")
+        downloadImage.backgroundColor = UIColor.clear
+        downloadImage.contentMode = .scaleAspectFit
+        downloadImage.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        downloadImage.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        return downloadImage
+    }()
+    
+    
     var bubbleWidthAnchor: NSLayoutConstraint?
     var bubbleViewRightAnchor: NSLayoutConstraint?
     var bubbleViewLeftAnchor: NSLayoutConstraint?
@@ -69,8 +116,11 @@ class IsiBeritaCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+      
+        
         addSubview(bubbleView)
         addSubview(textView)
+        
        // addSubview(profileImageView)
         
         bubbleView.addSubview(messageImageView)
@@ -78,14 +128,6 @@ class IsiBeritaCell: UICollectionViewCell {
         messageImageView.topAnchor.constraint(equalTo: bubbleView.topAnchor).isActive = true
         messageImageView.widthAnchor.constraint(equalTo: bubbleView.widthAnchor).isActive = true
         messageImageView.heightAnchor.constraint(equalTo: bubbleView.heightAnchor).isActive = true
-        
-//        //x,y,w,h
-//        profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
-//        profileImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-//        profileImageView.widthAnchor.constraint(equalToConstant: 32).isActive = true
-//        profileImageView.heightAnchor.constraint(equalToConstant: 32).isActive = true
-        
-        //x,y,w,h
         
         bubbleViewRightAnchor = bubbleView.rightAnchor.constraint(lessThanOrEqualTo: self.rightAnchor, constant: -15)
         bubbleViewRightAnchor?.isActive = true
@@ -108,13 +150,33 @@ class IsiBeritaCell: UICollectionViewCell {
         
         textView.rightAnchor.constraint(equalTo: bubbleView.rightAnchor, constant: -8).isActive = true
         //        textView.widthAnchor.constraintEqualToConstant(200).active = true
-        
-        
         textView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
-    }
-    
-    @objc func test(){
-        print("test")
+        
+        
+        
+        addSubview(fileView)
+        
+        fileView.addSubview(iconFile)
+        fileView.addSubview(labelFile)
+        fileView.addSubview(downloadImage)
+        
+        iconFile.leftAnchor.constraint(equalTo: fileView.leftAnchor, constant: 10).isActive = true
+        iconFile.centerYAnchor.constraint(equalTo: fileView.centerYAnchor).isActive = true
+        
+        downloadImage.centerYAnchor.constraint(equalTo: fileView.centerYAnchor).isActive = true
+        downloadImage.rightAnchor.constraint(equalTo: fileView.rightAnchor, constant: -10).isActive = true
+        
+        labelFile.topAnchor.constraint(equalTo: fileView.topAnchor, constant: 10).isActive = true
+        labelFile.bottomAnchor.constraint(equalTo: fileView.bottomAnchor, constant: -10).isActive = true
+        labelFile.rightAnchor.constraint(equalTo: downloadImage.leftAnchor, constant: -10).isActive = true
+        labelFile.leftAnchor.constraint(equalTo: iconFile.rightAnchor, constant: 10).isActive = true
+        
+        
+        fileView.leftAnchor.constraint(equalTo: bubbleView.leftAnchor).isActive = true
+        fileView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
+        fileView.rightAnchor.constraint(equalTo: bubbleView.rightAnchor).isActive = true
+        fileView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
     }
     
     @objc func zoomTap (tapgesture: UITapGestureRecognizer) {

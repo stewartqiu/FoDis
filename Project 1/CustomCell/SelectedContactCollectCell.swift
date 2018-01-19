@@ -11,5 +11,4 @@ import UIKit
 class SelectedContactCollectCell: UICollectionViewCell {
     @IBOutlet weak var contactImage: UIImageView!
     @IBOutlet weak var contactNameLabel: UILabel!
-    
 }

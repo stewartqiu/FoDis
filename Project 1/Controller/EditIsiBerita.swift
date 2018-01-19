@@ -67,7 +67,7 @@ class EditIsiBerita: UIViewController {
             let isKeyboardShow = notification.name == NSNotification.Name.UIKeyboardWillShow
             
             if isKeyboardShow {
-                self.bottomConstraint.constant = keyboardFrame.height + 30
+                self.bottomConstraint.constant = keyboardFrame.height + 10
                 self.view.layoutIfNeeded()
             }
             else {

@@ -127,13 +127,13 @@ class SimpanNet {
     
     func settingOsList (negara : String , prov : String , kota : String , noHp : String , dateTime : String) {
         let ref = reference.child("Setting/OSList/iOS/\(negara)/\(prov)/\(kota)")
-        let value = [noHp : dateTime]
+        let value = [noHp : "\(namaAplikasi) \(dateTime)"]
         ref.updateChildValues(value)
     }
     
     //TODO: - UPDATE NAMA
     
-   func updateNama (negara : String , prov : String , kota : String , noHp : String , nama : String) {
+    func updateNama (negara : String , prov : String , kota : String , noHp : String , nama : String) {
         let ref1 = reference.child("Penduduk").child(negara).child(prov).child(kota).child(noHp).child("Aplikasi").child(namaAplikasi).child("Setting")
         let ref2 = reference.child("Penduduk").child(negara).child(prov).child(kota).child(noHp).child("Data").child("Profile")
         let value = ["Nama" : nama]
@@ -141,11 +141,25 @@ class SimpanNet {
         ref2.updateChildValues(value)
     }
     
+    
+    func updateNamaOnGrup (grupPath : String , noHp : String, nama : String) {
+        let ref = reference.child("\(grupPath)/Anggota/\(noHp)")
+        let value = ["NamaAnggota" : nama]
+        ref.updateChildValues(value)
+    }
+    
+    
     //TODO:- UPDATE FOTO URL Penduduk
     
     func updateFotoUrlPenduduk (negara : String , prov : String , kota : String, noHp : String , url : String){
         let ref = reference.child("Penduduk").child(negara).child(prov).child(kota).child(noHp).child("Data").child("Profile")
         let value = ["Foto" : url]
+        ref.updateChildValues(value)
+    }
+    
+    func updateFotoUrlOnGrup (grupPath : String , noHp : String, url : String) {
+        let ref = reference.child("\(grupPath)/Anggota/\(noHp)")
+        let value = ["PathFoto" : url]
         ref.updateChildValues(value)
     }
     

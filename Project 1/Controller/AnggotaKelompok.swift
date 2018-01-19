@@ -41,7 +41,18 @@ class AnggotaKelompok: UIViewController , UITableViewDelegate , UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "anggotaKelompokCell") as! AnggotaKelompokCell
-        cell.namaAnggotaLabel.text = anggotaArray[indexPath.row].namaAnggota
+        
+        let anggotaAtIndex = anggotaArray[indexPath.row]
+        
+        cell.namaAnggotaLabel.text = anggotaAtIndex.namaAnggota
+        
+        if anggotaAtIndex.pathFoto != nil && anggotaAtIndex.pathFoto != "" && anggotaAtIndex.pathFoto != "null" {
+            cell.anggotaImage.kf.indicatorType = .activity
+            cell.anggotaImage.kf.setImage(with: URL(string: anggotaAtIndex.pathFoto!), placeholder: #imageLiteral(resourceName: "kontak"))
+        } else {
+            cell.anggotaImage.image = #imageLiteral(resourceName: "kontak")
+        }
+        
         return cell
     }
     

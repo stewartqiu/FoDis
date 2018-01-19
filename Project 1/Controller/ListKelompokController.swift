@@ -10,6 +10,7 @@ import UIKit
 import Contacts
 import ContactsUI
 import SVProgressHUD
+import Alamofire
 
 class ListKelompokController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
@@ -49,7 +50,7 @@ class ListKelompokController: UIViewController, UITableViewDelegate, UITableView
             present(alert, animated: true, completion: nil)
         }
         
-        test()
+        //test()
         
         handleSurveiPayment()
         
@@ -57,14 +58,32 @@ class ListKelompokController: UIViewController, UITableViewDelegate, UITableView
     
     func test () {
         
-        //SimpanNet().deleteGrupAnggota(negaraKel: "Indonesia", provKel: "Riau", kotaKel: "Pekanbaru", idGrup: "6260002", hpToDelete: "625")
+        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
+        Alamofire.download("https://firebasestorage.googleapis.com/v0/b/schooldroid-data.appspot.com/o/Grup%2FIndonesia%2FRiau%2FKota%20Pekanbaru%2F6289812828880002%2FDAFTAR%20KD%20SMP.csv?alt=media&token=7c5abb8e-7897-4efc-8f63-aae6d4d9c21b", to: destination).responseData { (data) in
+            print("Success")
+            print(data.destinationURL)
+        }
         
     }
     
     func ambilNet() {
+        
+        var nama = ""
+        var foto = ""
+        
+        if let namaVal = SettingLite().getFiltered(keyfile: SettingKey.nama) {
+            nama = namaVal
+        }
+        if let fotoVal = SettingLite().getFiltered(keyfile: SettingKey.foto) {
+            foto = fotoVal
+        }
+        
         let ambil = AmbilNet()
         ambil.grupPath { (path) in
             print(path)
+            
+            Simpan.updateNamaDanFotoOnGrup(grupPath: path, nama: nama, url: foto)
+            
             ambil.grupAddedListener(pathGrup: path, completion: {
                 self.loadData()
             })
@@ -159,7 +178,7 @@ class ListKelompokController: UIViewController, UITableViewDelegate, UITableView
         
         if kelompokAtIndex.foto != nil && kelompokAtIndex.foto! != "" && kelompokAtIndex.foto! != "null" {
             cell.iconImage.kf.indicatorType = .activity
-            cell.iconImage.kf.setImage(with: URL(string: kelompokAtIndex.foto!), placeholder: #imageLiteral(resourceName: "image"))
+            cell.iconImage.kf.setImage(with: URL(string: kelompokAtIndex.foto!), placeholder: #imageLiteral(resourceName: "group"))
         }
         
         cell.jumlahAnggotaButton.tag = indexPath.row
@@ -202,9 +221,9 @@ class ListKelompokController: UIViewController, UITableViewDelegate, UITableView
             destination.kelompokToEdit = selectedKelompokToInspect
             destination.isEdit = true
         }
-    
-        
     }
+    
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredArray = kelompokArray.filter({ (kelompok) -> Bool in
@@ -290,7 +309,7 @@ class ListKelompokController: UIViewController, UITableViewDelegate, UITableView
         
         if SettingLite().getFiltered(keyfile: SettingKey.caraPayment) == nil || SettingLite().getFiltered(keyfile: SettingKey.caraPayment) == "" || SettingLite().getFiltered(keyfile: SettingKey.caraPayment) == "null" {
             performSegue(withIdentifier: "showSurvei", sender: self)
-        } else if SettingLite().getFiltered(keyfile: SettingKey.id) != nil || SettingLite().getFiltered(keyfile: SettingKey.id) != "" || SettingLite().getFiltered(keyfile: SettingKey.id) != "null" {
+        }else if SettingLite().getFiltered(keyfile: SettingKey.id) != nil || SettingLite().getFiltered(keyfile: SettingKey.id) != "" || SettingLite().getFiltered(keyfile: SettingKey.id) != "null" {
             if setting.getFiltered(keyfile: SettingKey.sudahSimpanPayment) == nil || setting.getFiltered(keyfile: SettingKey.sudahSimpanPayment) != "1"{
                 SimpanNet().payment(negara: setting.getFiltered(keyfile: SettingKey.negara)!, prov: setting.getFiltered(keyfile: SettingKey.provinsi)!, kota: setting.getFiltered(keyfile: SettingKey.kota)!, noHp: setting.getFiltered(keyfile: SettingKey.noHp)!, cara: setting.getFiltered(keyfile: SettingKey.caraPayment)!, tanggal: setting.getFiltered(keyfile: SettingKey.tanggalPayment)!)
                 
@@ -299,8 +318,7 @@ class ListKelompokController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    
-    
+
 }
 
 

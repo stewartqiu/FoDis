@@ -23,7 +23,6 @@
 		F41017411FE26CD1006BBA3E /* ArtikelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41017401FE26CD1006BBA3E /* ArtikelCell.swift */; };
 		F414F1051FD7B94800E27FED /* BuatKelompokController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414F1041FD7B94800E27FED /* BuatKelompokController.swift */; };
 		F41568A71FF889E000C87EB9 /* Simpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41568A61FF889E000C87EB9 /* Simpan.swift */; };
-		F41709BD1FFE3AF700A143E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41709BC1FFE3AF700A143E1 /* GoogleService-Info.plist */; };
 		F4181EEC1FEE4B8300C20D73 /* IsiBerita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4181EEB1FEE4B8300C20D73 /* IsiBerita.swift */; };
 		F41AC6C61FE385C300E8698C /* SelectedContactCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6C51FE385C300E8698C /* SelectedContactCollectCell.swift */; };
 		F41AC6C81FE3A92000E8698C /* Kontak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC6C71FE3A92000E8698C /* Kontak.swift */; };
@@ -45,6 +44,7 @@
 		F4537B6920047F9A00B6BDF9 /* PathGrupLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4537B6820047F9A00B6BDF9 /* PathGrupLite.swift */; };
 		F4574B6F200D9B680008EE80 /* EditIsiBerita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4574B6E200D9B680008EE80 /* EditIsiBerita.swift */; };
 		F458AA3C1FDFE06400A0FD3A /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458AA3B1FDFE06400A0FD3A /* DeviceModel.swift */; };
+		F46387B6200F175100AA58F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F46387B5200F175100AA58F0 /* GoogleService-Info.plist */; };
 		F463FEF21FE9012E0029A1DC /* PilihAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F463FEF11FE9012E0029A1DC /* PilihAdmin.swift */; };
 		F4658C2A1FDBA476004B648B /* ListArtikel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4658C291FDBA476004B648B /* ListArtikel.swift */; };
 		F46BE9771FF8C69B0007CB22 /* Anggota.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46BE9761FF8C69B0007CB22 /* Anggota.swift */; };
@@ -82,7 +82,6 @@
 		F41017401FE26CD1006BBA3E /* ArtikelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtikelCell.swift; sourceTree = "<group>"; };
 		F414F1041FD7B94800E27FED /* BuatKelompokController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuatKelompokController.swift; sourceTree = "<group>"; };
 		F41568A61FF889E000C87EB9 /* Simpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simpan.swift; sourceTree = "<group>"; };
-		F41709BC1FFE3AF700A143E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4181EEB1FEE4B8300C20D73 /* IsiBerita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsiBerita.swift; sourceTree = "<group>"; };
 		F41AC6C51FE385C300E8698C /* SelectedContactCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedContactCollectCell.swift; sourceTree = "<group>"; };
 		F41AC6C71FE3A92000E8698C /* Kontak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kontak.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		F4537B6820047F9A00B6BDF9 /* PathGrupLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathGrupLite.swift; sourceTree = "<group>"; };
 		F4574B6E200D9B680008EE80 /* EditIsiBerita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIsiBerita.swift; sourceTree = "<group>"; };
 		F458AA3B1FDFE06400A0FD3A /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		F46387B5200F175100AA58F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F463FEF11FE9012E0029A1DC /* PilihAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihAdmin.swift; sourceTree = "<group>"; };
 		F4658C291FDBA476004B648B /* ListArtikel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArtikel.swift; sourceTree = "<group>"; };
 		F46BE9761FF8C69B0007CB22 /* Anggota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anggota.swift; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 				F4965E701FD2593E0085F213 /* Assets.xcassets */,
 				F4965E721FD2593E0085F213 /* LaunchScreen.storyboard */,
 				F4965E751FD2593E0085F213 /* Info.plist */,
-				F41709BC1FFE3AF700A143E1 /* GoogleService-Info.plist */,
+				F46387B5200F175100AA58F0 /* GoogleService-Info.plist */,
 			);
 			path = "Project 1";
 			sourceTree = "<group>";
@@ -379,8 +379,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46387B6200F175100AA58F0 /* GoogleService-Info.plist in Resources */,
 				F4965E741FD2593E0085F213 /* LaunchScreen.storyboard in Resources */,
-				F41709BD1FFE3AF700A143E1 /* GoogleService-Info.plist in Resources */,
 				F4965E711FD2593E0085F213 /* Assets.xcassets in Resources */,
 				F4965E6F1FD2593E0085F213 /* Main.storyboard in Resources */,
 			);
@@ -413,9 +413,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -429,6 +432,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-INFO DISDIK/Pods-INFO DISDIK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
@@ -444,6 +448,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
@@ -546,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -603,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

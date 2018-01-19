@@ -9,9 +9,10 @@
 import CoreLocation
 import UIKit
 import Foundation
+import GoogleMaps
 
 protocol GpsDelegate {
-    func getLocation(latitude : String? , longitude : String? , negara : String? , provinsi : String? , kota : String? , namaJalan : String? , kodePos : String?)
+    func getLocation(latitude : String? , longitude : String? , negara : String? , provinsi : String? , kota : String? , kec : String? , kel : String? , namaJalan : String? , kodePos : String?)
 }
 
 class GPS: NSObject, CLLocationManagerDelegate  {
@@ -52,15 +53,25 @@ class GPS: NSObject, CLLocationManagerDelegate  {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
 
-            print("long = \(lat) , lat = \(lon)")
+            print("long = \(lon) , lat = \(lat)")
             
-            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemark, error) in
-                if error != nil {
-                    print("Error Location")
-                }
-                else {
-                    if let posisi = placemark?.last {
-                        self.delegate?.getLocation(latitude: String(lat), longitude: String(lon), negara: posisi.country, provinsi: posisi.administrativeArea, kota: posisi.locality, namaJalan: posisi.name, kodePos: posisi.postalCode)
+            GMSGeocoder().reverseGeocodeCoordinate(CLLocationCoordinate2D.init(latitude: lat, longitude: lon), completionHandler: { (result, error) in
+                if let error = error {
+                    print("Error \(error)")
+                } else {
+                    if let res = result!.firstResult(){
+                        var kota : String?
+                        if let lines = res.lines {
+                            //print(lines)
+                            let line2 = lines[1]
+                            let pisah = line2.split(separator: ",")
+                            if pisah.count >= 2 {
+                                kota = pisah[pisah.count-2].replacingOccurrences(of: "Kabupaten", with: "Kab").trimmingCharacters(in: .whitespacesAndNewlines)
+                            }
+                        }
+                        
+                        //let kota = posisi.locality?.replacingOccurrences(of: "Kabupaten", with: "Kab")
+                        self.delegate?.getLocation(latitude: String(lat), longitude: String(lon), negara: res.country, provinsi: res.administrativeArea, kota: kota, kec: res.locality, kel: res.subLocality, namaJalan: res.thoroughfare, kodePos: res.postalCode)
                     }
                 }
             })
@@ -69,7 +80,6 @@ class GPS: NSObject, CLLocationManagerDelegate  {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
     }
     
     func stop (){

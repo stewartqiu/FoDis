@@ -176,18 +176,17 @@ class ArtikelBaru : UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func checkCompletion () {
-        
         if isJudulComplete && isKeywordComplete {
             navigationItem.rightBarButtonItem?.isEnabled = true
         }
         else {
             navigationItem.rightBarButtonItem?.isEnabled = false
         }
-        
     }
     
+    
+    
     func setEdit () {
-        
         navigationItem.title = "Sunting Artikel"
         
         judulTextView.text = judulToEdit

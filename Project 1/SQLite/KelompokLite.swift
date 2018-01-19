@@ -10,6 +10,7 @@ import Foundation
 import SQLite
 
 class DatabaseLite {
+    
     static let connection : Connection! = {
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)

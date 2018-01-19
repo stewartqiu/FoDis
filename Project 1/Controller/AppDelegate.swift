@@ -10,6 +10,8 @@ import UIKit
 import IQKeyboardManagerSwift
 import DropDown
 import Firebase
+import UserNotifications
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +19,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
         IQKeyboardManager.sharedManager().enable = true
-        FirebaseApp.configure()
         DropDown.startListeningToKeyboard()
+        
+        GMSServices.provideAPIKey("AIzaSyBldo0KyVVsZ3IJ07G33s1SWs_PD3fLlO0")
+        
+        UserDefaults.standard.set(["id"], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        
+        FirebaseApp.configure()
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge , .sound , .alert], completionHandler: { (granted, error) in
+                if let error = error {
+                    print("Error \(error)")
+                }
+            });
+            application.registerForRemoteNotifications()
+        } else{
+            let notificationSettings = UIUserNotificationSettings(types: [.badge , .sound , .alert], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(notificationSettings)
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+        
         
         //let _ = SettingLite().insertData(keyfile: SettingKey.isTest, value: "0")
         

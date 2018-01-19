@@ -9,6 +9,8 @@
 import UIKit
 import Contacts
 import ContactsUI
+import Photos
+import PhotosUI
 
 class STool {
     
@@ -71,6 +73,23 @@ class STool {
         sender.present(imagePicker, animated: true, completion: nil)
     }
     
+    static func fetchLastImage(completion: ( _ localIdentifier: String?) -> Void)
+    {
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        fetchOptions.fetchLimit = 1
+        
+        let fetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        if (fetchResult.firstObject != nil)
+        {
+            let lastImageAsset: PHAsset = fetchResult.firstObject!
+            completion(lastImageAsset.localIdentifier)
+        }
+        else
+        {
+            completion(nil)
+        }
+    }
     
     
 }
